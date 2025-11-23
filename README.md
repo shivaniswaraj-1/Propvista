@@ -98,4 +98,3 @@ Planned upgrades to evolve PropVista into a full-featured real-estate platform:
 This project is open for contributions!  
 Check the issues tab for tasks you can work on.  
 Feel free to open a pull request after making improvements.
-
