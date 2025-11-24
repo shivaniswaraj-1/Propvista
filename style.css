@@ -90,5 +90,20 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.wishlist-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  float: right;
+  color: #ff4d4d;
+}
 
+.wishlist-btn i {
+  transition: transform 0.2s ease;
+}
+
+.wishlist-btn:hover i {
+  transform: scale(1.3);
+}
 
