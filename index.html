@@ -50,12 +50,15 @@
         <button id="darkModeToggle" class="btn btn-outline-secondary me-2" aria-label="Toggle dark mode">
           <i class="fas fa-moon" id="darkModeIcon"></i>
         </button>
-        <a href="#" class="btn btn-outline-secondary me-2">Login</a>
+        <a href="#" class="btn btn-outline-secondary me-2" id="loginBtn">Login</a>
         <a href="#" class="btn btn-primary">Post Property</a>
       </div>
     </div>
   </div>
 </nav>
+
+
+
 <!--Hero Section -->
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -340,6 +343,28 @@
     </p>
   </div>
 </footer>
+<!-- Overlay -->
+<div id="overlay"></div>
+
+<!-- Auth Popup -->
+<div id="authPopup">
+    <div class="auth-box">
+        <h2 id="authTitle">Login</h2>
+
+        <input type="text" id="username" placeholder="Enter username">
+        <input type="password" id="password" placeholder="Enter password">
+
+        <button id="authActionBtn">Login</button>
+
+        <p class="switch-text">
+            Don’t have an account?
+            <span id="switchToSignup">Signup</span>
+        </p>
+
+        <span id="closePopup" class="close-btn">&times;</span>
+    </div>
+</div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="dark-mode.js"></script>
