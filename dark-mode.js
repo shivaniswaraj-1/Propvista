@@ -6,7 +6,6 @@
   const darkModeToggle = document.getElementById('darkModeToggle');
   const darkModeIcon = document.getElementById('darkModeIcon');
   const htmlElement = document.documentElement;
-
   // Check for saved theme preference or default to light mode
   const currentTheme = localStorage.getItem('theme') || 'light';
   
@@ -89,5 +88,42 @@
 
   // Re-initialize if new content is dynamically added
   window.addEventListener('load', initScrollAnimations);
+
 })();
+const loginBtn = document.getElementById("loginBtn");
+const overlay = document.getElementById("overlay");
+const authPopup = document.getElementById("authPopup");
+const closePopup = document.getElementById("closePopup");
+const switchToSignup = document.getElementById("switchToSignup");
+const authTitle = document.getElementById("authTitle");
+const authActionBtn = document.getElementById("authActionBtn");
+
+// Show Login Popup
+loginBtn.addEventListener("click", () => {
+    overlay.style.display = "block";
+    authPopup.style.display = "block";
+});
+
+// Close Popup
+closePopup.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+function closeModal() {
+    overlay.style.display = "none";
+    authPopup.style.display = "none";
+}
+
+// Switch Login <-> Signup
+switchToSignup.addEventListener("click", () => {
+    if (authTitle.innerText === "Login") {
+        authTitle.innerText = "Signup";
+        authActionBtn.innerText = "Signup";
+        switchToSignup.innerText = "Login";
+    } else {
+        authTitle.innerText = "Login";
+        authActionBtn.innerText = "Login";
+        switchToSignup.innerText = "Signup";
+    }
+});
+
 
